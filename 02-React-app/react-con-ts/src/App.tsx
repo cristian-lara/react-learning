@@ -9,16 +9,21 @@ const objetoPersona: {nombre:string, apellido: string} = {
 }
 
 const suma = (a: number, b: number) => a + b;
-
-function App() {
+interface PropsAppInterface {
+    titulo:string
+}
+function App({ titulo = 'defaultTit' }) {
 
   return (
-  <Fragment>
+  <>
+      <code>{ titulo }</code>
       <h1>Mi nombre es {nombre}</h1>
       <code>{objetoPersona.nombre}</code>
+
       <code>Renderizando execucion de funcion: {suma(3,4)}</code>
       <p>otro mas</p>
-  </Fragment>
+
+  </>
   )
 }
 

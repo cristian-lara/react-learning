@@ -22,3 +22,7 @@ Forma 2
 <p>Linea 2</p>
 </>
 ```
+
+Props
+
+Utilizando las herramientas de desarrollo podemos inicializar estas propiedades del objeto
