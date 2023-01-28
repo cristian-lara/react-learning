@@ -26,3 +26,17 @@ Forma 2
 Props
 
 Utilizando las herramientas de desarrollo podemos inicializar estas propiedades del objeto
+
+
+HOOKS
+
+UseState
+
+importar de la libreria react
+
+```react
+import  { useState } from 'react';
+ const [valor, metodoQueCambia] = useState(valorEstadoInicial)
+```
+usando la destructuracion se tiene en la constante dos variables valor y funcion 
+no se puede cambiar directamente el valor para eso se utiliza la segunda variable que es "metodo que cambia"
