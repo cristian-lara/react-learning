@@ -4,16 +4,19 @@ export const GliphyApp = () => {
 
     const [categorias, setCategorias] = useState([{nombre: 'a', id: 1}, {nombre:'b', id: 2}]);
     console.log('categorias', categorias)
-    const addCategory = ()=>{
+    const addCategory = (value)=>{
         // no es bueno usar el push ya que muta el objeto
-    setCategorias([...categorias, {nombre:'c', id: 3}])
+    setCategorias([{nombre: value, id: categorias.length + 1},...categorias, ])
     }
     return (
         <>
             {/*titulo*/}
         <h1>App cargada</h1>
         {/*input*/}
-            <AddCategory  setCategoria = { setCategorias } />
+
+            {/* envaindo la funcion al hijo
+            <AddCategory  setCategoria = { setCategorias } /> */}
+            <AddCategory  onAddCategoria = {addCategory} />
             {/*Listado*/}
             <ol>
                 {

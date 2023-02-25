@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const AddCategory = ({setCategoria}) => {
+export const AddCategory = ({onAddCategoria}) => {
     const [value, setValue] = useState('hola');
 
     const onInputChanges = ({target}) => {
@@ -13,7 +13,10 @@ export const AddCategory = ({setCategoria}) => {
 
         // validacion para no registrar valores vacios
         if(value.length < 1) return;
-        setCategoria(categorias=> [{nombre: value , id: categorias.length + 1}, ...categorias])
+      //  setCategoria(categorias=> [{nombre: value , id: categorias.length + 1}, ...categorias])
+        // enviando eventos al padre
+        onAddCategoria(value.trim())
+        setValue('');
     }
     return(
         <>
