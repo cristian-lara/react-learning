@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({setCategoria}) => {
     const [value, setValue] = useState('hola');
 
     const onInputChanges = ({target}) => {
@@ -8,7 +8,12 @@ export const AddCategory = () => {
     }
 
     const onSubmit = (event) => {
-        event.target.preventDefault();
+        //evitamos que se recarge la pagina al enviar mi formulario
+        event.preventDefault();
+
+        // validacion para no registrar valores vacios
+        if(value.length < 1) return;
+        setCategoria(categorias=> [{nombre: value , id: categorias.length + 1}, ...categorias])
     }
     return(
         <>

@@ -13,9 +13,8 @@ export const GliphyApp = () => {
             {/*titulo*/}
         <h1>App cargada</h1>
         {/*input*/}
-            <AddCategory />
+            <AddCategory  setCategoria = { setCategorias } />
             {/*Listado*/}
-            <button onClick={addCategory}>Agregar categoria</button>
             <ol>
                 {
                     categorias.map((categoria)=> {
