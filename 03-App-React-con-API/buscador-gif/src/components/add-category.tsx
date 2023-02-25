@@ -1,13 +1,13 @@
 import {useState} from "react";
 
-export const AddCategory = ({onAddCategoria}) => {
+export const AddCategory = ({onAddCategoria}: any) => {
     const [value, setValue] = useState('hola');
 
-    const onInputChanges = ({target}) => {
+    const onInputChanges = ({target}:any) => {
         setValue(target.value)
     }
 
-    const onSubmit = (event) => {
+    const onSubmit = (event : any) => {
         //evitamos que se recarge la pagina al enviar mi formulario
         event.preventDefault();
 
