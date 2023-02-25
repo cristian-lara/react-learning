@@ -1,5 +1,6 @@
 import {getGifts} from "../helpers/get-gifs";
 import {useEffect, useState} from "react";
+import {GifGridItemComponent} from "./gif-grid-item.component";
 export interface Igif {
     id: string,
     title: string,
@@ -23,15 +24,14 @@ export const GiftGridComponent = ({categoria}: any)=> {
                 <h2>
                     {categoria.id} - {categoria.nombre}
                 </h2>
-<ol>
-    { gifs.map((gif: Igif) => (
+                <div className="card-grid">
+                     { gifs.map((image: Igif) => (
 
-            <li key={gif.id}>
-                {gif.title}
-            </li>
+                         // con el spreed podemos exparsir todos los atributos es una sintaxis valida
+                        <GifGridItemComponent key={image.id} {...image} />
 
-    ) ) }
-</ol>
+                        ) ) }
+                </div>
 
 
 
