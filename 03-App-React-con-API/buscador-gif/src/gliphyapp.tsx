@@ -1,6 +1,6 @@
 import {useState} from "react";
-import {AddCategory} from "./components/add-category";
-import {GiftGridComponent} from "./components/gift-grid.component";
+import {AddCategory, GiftGridComponent} from "./components";
+
 export interface ICategoria {
     nombre: string;
     id: number;
