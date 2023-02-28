@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/cristian-lara/react-learning/compare/v1.1.0...v1.2.0) (2023-02-28)
+
+
+### Features
+
+* test configurado para typescript ([4d5c8bc](https://github.com/cristian-lara/react-learning/commit/4d5c8bc1b370bb0f216e1359169a1eee72361fa7))
+
 ## 1.1.0 (2023-02-26)
 
 
