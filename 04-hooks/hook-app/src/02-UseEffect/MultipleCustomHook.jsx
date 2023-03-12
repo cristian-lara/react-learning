@@ -1,5 +1,7 @@
-import {UseFetch} from "../hooks/UseFetch.js";
-import {UseCounter} from "../hooks/UseCounter.jsx";
+import {UseCounter, UseFetch} from "../hooks/util.js";
+import {Loading} from "../components/Loading.jsx";
+import {QuoteBB} from "../components/QuoteBB.jsx";
+
 
 export const MultipleCustomHook = () => {
 
@@ -19,18 +21,13 @@ export const MultipleCustomHook = () => {
             <hr/>
             {
                 isLoading ? (
-                        <div className="alert alert-info text-center">
-                            ...Cargando
-                        </div>
+                        <Loading/>
                     )
                     :
                     (
                         data.map((value, index)=>{
                             return (
-                                <blockquote key={index} className="blockquote text-end">
-                                    <p>{value.quote}</p>
-                                    <footer className="blockquote-footer">{value.author}</footer>
-                                </blockquote>
+                                <QuoteBB key={index} {...value}/>
                             )
                         })
 
