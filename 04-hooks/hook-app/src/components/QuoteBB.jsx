@@ -1,5 +1,4 @@
-export const QuoteBB = (params) => {
-    const {quote, author} = params;
+export const QuoteBB = ({quote, author}) => {
     return (
         <>
             <blockquote  className="blockquote text-end">

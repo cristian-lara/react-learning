@@ -1,6 +1,6 @@
 import {UseCounter, UseFetch} from "../hooks/util.js";
-import {Loading} from "../components/Loading.jsx";
-import {QuoteBB} from "../components/QuoteBB.jsx";
+import {Loading, QuoteBB} from "../components/index.js";
+
 
 
 export const MultipleCustomHook = () => {
