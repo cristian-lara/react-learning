@@ -1,4 +1,4 @@
-import {UseCounter, UseFetch} from "../hooks/util.js";
+import {UseCounter, UseFetch} from "../hooks/index.js";
 import {Loading, QuoteBB} from "../components/index.js";
 
 
