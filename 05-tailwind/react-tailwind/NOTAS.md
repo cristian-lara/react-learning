@@ -17,7 +17,7 @@ add the available files for content
 ```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,ts}"],
+  content: [ './src/**/*.{html,js,jsx,ts,tsx}',],
   theme: {
     extend: {},
   },
@@ -25,4 +25,25 @@ module.exports = {
 }
 ```
 
-- Add all directives to our CSS
+- Add all directives to our CSS ***index.css***
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+- Adding DARK mode with the current SO theme
+  - first we need to create a Button and add the handle function to change the color.
+  - we have the initial value in the useState with 'light' value;
+  - To change throught themes we just need to aply the class Dark and add the dark conditions in each element that we want change.
+
+Here an example
+
+```html
+    <div className="h-screen flex justify-center items-center text-5xl bg-slate-500 dark:bg-black"
+      >
+        <button onClick={handleThemeColor} 
+        className='bg-slate-200 text-black px-4 py-2 rounded hover:bg-slate-300  dark:bg-slate-600 dark:text-white dark:hover:bg-slate-900'> Change theme</button>
+      </div>
+```
