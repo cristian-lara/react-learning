@@ -5,7 +5,8 @@ import './App.css'
 
 function App() {
   return (
-      <div>APP</div>
+      <div className="h-screen flex justify-center items-center text-5xl"
+      >APP</div>
   )
 }
 
