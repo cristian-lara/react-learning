@@ -25,7 +25,7 @@ module.exports = {
 }
 ```
 
-- Add all directives to our CSS ***index.css***
+- Add all directives to our CSS into  ***index.css***
 
 ```css
 @tailwind base;
@@ -37,6 +37,7 @@ module.exports = {
   - first we need to create a Button and add the handle function to change the color.
   - we have the initial value in the useState with 'light' value;
   - To change throught themes we just need to aply the class Dark and add the dark conditions in each element that we want change.
+  - With the use effect we are going to apply the class dark or remove
 
 Here an example
 
