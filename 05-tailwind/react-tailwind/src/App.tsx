@@ -3,7 +3,13 @@ import './App.css'
 
 function App() {
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(()=>{
+    if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+      return 'dark';
+    }
+
+    return 'light';
+  });
 
   useEffect(()=> {
     if(theme === 'dark'){
